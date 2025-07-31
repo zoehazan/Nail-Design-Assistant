@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		1148677C2E3B3C6700803B94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114867632E3B3C5D00803B94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1148676A2E3B3C5D00803B94;
+			remoteInfo = "Nail Design Assistant";
+		};
+		114867862E3B3C6700803B94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 114867632E3B3C5D00803B94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1148676A2E3B3C5D00803B94;
+			remoteInfo = "Nail Design Assistant";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1148676B2E3B3C5D00803B94 /* Nail Design Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nail Design Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1148677B2E3B3C6700803B94 /* Nail Design AssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nail Design AssistantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		114867852E3B3C6700803B94 /* Nail Design AssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nail Design AssistantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1148676D2E3B3C5D00803B94 /* Nail Design Assistant */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nail Design Assistant";
+			sourceTree = "<group>";
+		};
+		1148677E2E3B3C6700803B94 /* Nail Design AssistantTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nail Design AssistantTests";
+			sourceTree = "<group>";
+		};
+		114867882E3B3C6700803B94 /* Nail Design AssistantUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Nail Design AssistantUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		114867682E3B3C5D00803B94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867782E3B3C6700803B94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867822E3B3C6700803B94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		114867622E3B3C5D00803B94 = {
+			isa = PBXGroup;
+			children = (
+				1148676D2E3B3C5D00803B94 /* Nail Design Assistant */,
+				1148677E2E3B3C6700803B94 /* Nail Design AssistantTests */,
+				114867882E3B3C6700803B94 /* Nail Design AssistantUITests */,
+				1148676C2E3B3C5D00803B94 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1148676C2E3B3C5D00803B94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1148676B2E3B3C5D00803B94 /* Nail Design Assistant.app */,
+				1148677B2E3B3C6700803B94 /* Nail Design AssistantTests.xctest */,
+				114867852E3B3C6700803B94 /* Nail Design AssistantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1148676A2E3B3C5D00803B94 /* Nail Design Assistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1148678F2E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design Assistant" */;
+			buildPhases = (
+				114867672E3B3C5D00803B94 /* Sources */,
+				114867682E3B3C5D00803B94 /* Frameworks */,
+				114867692E3B3C5D00803B94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1148676D2E3B3C5D00803B94 /* Nail Design Assistant */,
+			);
+			name = "Nail Design Assistant";
+			packageProductDependencies = (
+			);
+			productName = "Nail Design Assistant";
+			productReference = 1148676B2E3B3C5D00803B94 /* Nail Design Assistant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1148677A2E3B3C6700803B94 /* Nail Design AssistantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114867922E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design AssistantTests" */;
+			buildPhases = (
+				114867772E3B3C6700803B94 /* Sources */,
+				114867782E3B3C6700803B94 /* Frameworks */,
+				114867792E3B3C6700803B94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1148677D2E3B3C6700803B94 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1148677E2E3B3C6700803B94 /* Nail Design AssistantTests */,
+			);
+			name = "Nail Design AssistantTests";
+			packageProductDependencies = (
+			);
+			productName = "Nail Design AssistantTests";
+			productReference = 1148677B2E3B3C6700803B94 /* Nail Design AssistantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		114867842E3B3C6700803B94 /* Nail Design AssistantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 114867952E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design AssistantUITests" */;
+			buildPhases = (
+				114867812E3B3C6700803B94 /* Sources */,
+				114867822E3B3C6700803B94 /* Frameworks */,
+				114867832E3B3C6700803B94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				114867872E3B3C6700803B94 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				114867882E3B3C6700803B94 /* Nail Design AssistantUITests */,
+			);
+			name = "Nail Design AssistantUITests";
+			packageProductDependencies = (
+			);
+			productName = "Nail Design AssistantUITests";
+			productReference = 114867852E3B3C6700803B94 /* Nail Design AssistantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		114867632E3B3C5D00803B94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					1148676A2E3B3C5D00803B94 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					1148677A2E3B3C6700803B94 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 1148676A2E3B3C5D00803B94;
+					};
+					114867842E3B3C6700803B94 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 1148676A2E3B3C5D00803B94;
+					};
+				};
+			};
+			buildConfigurationList = 114867662E3B3C5D00803B94 /* Build configuration list for PBXProject "Nail Design Assistant" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 114867622E3B3C5D00803B94;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1148676C2E3B3C5D00803B94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1148676A2E3B3C5D00803B94 /* Nail Design Assistant */,
+				1148677A2E3B3C6700803B94 /* Nail Design AssistantTests */,
+				114867842E3B3C6700803B94 /* Nail Design AssistantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		114867692E3B3C5D00803B94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867792E3B3C6700803B94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867832E3B3C6700803B94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		114867672E3B3C5D00803B94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867772E3B3C6700803B94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		114867812E3B3C6700803B94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1148677D2E3B3C6700803B94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1148676A2E3B3C5D00803B94 /* Nail Design Assistant */;
+			targetProxy = 1148677C2E3B3C6700803B94 /* PBXContainerItemProxy */;
+		};
+		114867872E3B3C6700803B94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1148676A2E3B3C5D00803B94 /* Nail Design Assistant */;
+			targetProxy = 114867862E3B3C6700803B94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1148678D2E3B3C6700803B94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1148678E2E3B3C6700803B94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		114867902E3B3C6700803B94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nail Design Assistant/Preview Content\"";
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-Assistant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		114867912E3B3C6700803B94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Nail Design Assistant/Preview Content\"";
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-Assistant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		114867932E3B3C6700803B94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-AssistantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nail Design Assistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nail Design Assistant";
+			};
+			name = Debug;
+		};
+		114867942E3B3C6700803B94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-AssistantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nail Design Assistant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nail Design Assistant";
+			};
+			name = Release;
+		};
+		114867962E3B3C6700803B94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-AssistantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nail Design Assistant";
+			};
+			name = Debug;
+		};
+		114867972E3B3C6700803B94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X28M67AZY3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "capstone.Nail-Design-AssistantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Nail Design Assistant";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		114867662E3B3C5D00803B94 /* Build configuration list for PBXProject "Nail Design Assistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1148678D2E3B3C6700803B94 /* Debug */,
+				1148678E2E3B3C6700803B94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1148678F2E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design Assistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114867902E3B3C6700803B94 /* Debug */,
+				114867912E3B3C6700803B94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114867922E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design AssistantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114867932E3B3C6700803B94 /* Debug */,
+				114867942E3B3C6700803B94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		114867952E3B3C6700803B94 /* Build configuration list for PBXNativeTarget "Nail Design AssistantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114867962E3B3C6700803B94 /* Debug */,
+				114867972E3B3C6700803B94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 114867632E3B3C5D00803B94 /* Project object */;
+}

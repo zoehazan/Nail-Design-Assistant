@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		114867B32E3B56B000803B94 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 114867B22E3B56B000803B94 /* FirebaseAnalytics */; };
+		114867B52E3B56B000803B94 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 114867B42E3B56B000803B94 /* FirebaseAuth */; };
+		114867B72E3B56B000803B94 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 114867B62E3B56B000803B94 /* FirebaseCore */; };
+		114867B92E3B56B000803B94 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 114867B82E3B56B000803B94 /* FirebaseFirestore */; };
+		114867BB2E3B56B000803B94 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 114867BA2E3B56B000803B94 /* FirebaseMessaging */; };
+		114867BD2E3B56B000803B94 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 114867BC2E3B56B000803B94 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1148677C2E3B3C6700803B94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +38,30 @@
 		114867852E3B3C6700803B94 /* Nail Design AssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nail Design AssistantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		114867AF2E3B54E000803B94 /* Exceptions for "Nail Design Assistant" folder in "Nail Design AssistantTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/GoogleService-Info.plist",
+			);
+			target = 1148677A2E3B3C6700803B94 /* Nail Design AssistantTests */;
+		};
+		114867B02E3B54E000803B94 /* Exceptions for "Nail Design Assistant" folder in "Nail Design AssistantUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/GoogleService-Info.plist",
+			);
+			target = 114867842E3B3C6700803B94 /* Nail Design AssistantUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1148676D2E3B3C5D00803B94 /* Nail Design Assistant */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				114867AF2E3B54E000803B94 /* Exceptions for "Nail Design Assistant" folder in "Nail Design AssistantTests" target */,
+				114867B02E3B54E000803B94 /* Exceptions for "Nail Design Assistant" folder in "Nail Design AssistantUITests" target */,
+			);
 			path = "Nail Design Assistant";
 			sourceTree = "<group>";
 		};
@@ -52,6 +82,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114867B32E3B56B000803B94 /* FirebaseAnalytics in Frameworks */,
+				114867B92E3B56B000803B94 /* FirebaseFirestore in Frameworks */,
+				114867BB2E3B56B000803B94 /* FirebaseMessaging in Frameworks */,
+				114867B72E3B56B000803B94 /* FirebaseCore in Frameworks */,
+				114867B52E3B56B000803B94 /* FirebaseAuth in Frameworks */,
+				114867BD2E3B56B000803B94 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +148,12 @@
 			);
 			name = "Nail Design Assistant";
 			packageProductDependencies = (
+				114867B22E3B56B000803B94 /* FirebaseAnalytics */,
+				114867B42E3B56B000803B94 /* FirebaseAuth */,
+				114867B62E3B56B000803B94 /* FirebaseCore */,
+				114867B82E3B56B000803B94 /* FirebaseFirestore */,
+				114867BA2E3B56B000803B94 /* FirebaseMessaging */,
+				114867BC2E3B56B000803B94 /* FirebaseStorage */,
 			);
 			productName = "Nail Design Assistant";
 			productReference = 1148676B2E3B3C5D00803B94 /* Nail Design Assistant.app */;
@@ -195,6 +237,9 @@
 			);
 			mainGroup = 114867622E3B3C5D00803B94;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1148676C2E3B3C5D00803B94 /* Products */;
 			projectDirPath = "";
@@ -558,6 +603,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		114867B22E3B56B000803B94 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		114867B42E3B56B000803B94 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		114867B62E3B56B000803B94 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		114867B82E3B56B000803B94 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		114867BA2E3B56B000803B94 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		114867BC2E3B56B000803B94 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114867B12E3B56B000803B94 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 114867632E3B3C5D00803B94 /* Project object */;
 }

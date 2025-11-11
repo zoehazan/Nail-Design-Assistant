@@ -1,17 +1,7 @@
 import SwiftUI
 
-struct Appointment: Identifiable {
-    let id = UUID()
-    let clientName: String
-    let service: String
-    let date: Date
-}
-
 struct CalendarView: View {
-    @State private var appointments: [Appointment] = [
-        Appointment(clientName: "Sarah M.", service: "GelX", date: Date()),
-        Appointment(clientName: "Michaela T.", service: "PolyGel", date: Calendar.current.date(byAdding: .day, value: 1, to: Date())!)
-    ]
+    @State private var appointments: [Appointment] = []
     @State private var selectedDate: Date = Date()
     @State private var showingAddSheet = false
 

@@ -1,19 +1,15 @@
-# Xcode
-xcuserdata/
-*.xcuserdatad
+# Xcode / Swift
 DerivedData/
 build/
-
-# SwiftPM
+*.xcworkspace/xcshareddata/swiftpm/Package.resolved
+*.xccheckout
+*.xcuserstate
+*.xcuserdatad
+# Swift Package Manager
 .swiftpm/
-.build/
-
-# Firebase
-GoogleService-Info.plist
-
-# macOS
-.DS_Store
-
 # Logs
 *.log
-
+# Firebase (keep the plist if you want teammates to build without extra setup)
+# GoogleService-Info.plist
+# Secrets
+*.pem

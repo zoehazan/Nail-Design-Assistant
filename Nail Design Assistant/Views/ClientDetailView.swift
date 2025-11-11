@@ -1,5 +1,7 @@
 import SwiftUI
 
+
+
 struct ClientDetailView: View {
     let client: Client
 
@@ -9,7 +11,7 @@ struct ClientDetailView: View {
                 .font(.largeTitle)
                 .bold()
 
-            Text("Phone: \(client.phone)")
+            Text("Phone: \(client.phone ?? "-")")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
 
@@ -17,15 +19,16 @@ struct ClientDetailView: View {
                 .font(.title2)
                 .bold()
 
+            let images = client.designImageNames
+
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(client.pastDesignImages, id: \.self) { imageName in
-                        Image(imageName)
+                HStack(spacing: 12) {
+                    ForEach(images, id: \.self) { name in
+                        Image(name)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 150, height: 150)
+                            .frame(width: 100, height: 100)
                             .clipShape(RoundedRectangle(cornerRadius: 12))
-                            .shadow(radius: 5)
                     }
                 }
             }
@@ -43,7 +46,7 @@ struct ClientDetailView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .frame(height: 200) // fix list height inside VStack
+            .frame(height: 200) 
 
             Spacer()
         }

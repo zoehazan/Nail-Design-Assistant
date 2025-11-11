@@ -1,5 +1,4 @@
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class FirestoreManager {
     static let shared = FirestoreManager()

@@ -1,9 +1,11 @@
 import SwiftUI
-
-
+import FirebaseFirestore
 
 struct ClientDetailView: View {
     let client: Client
+    
+    @State private var appts: [Appointment] = []
+    @State private var listener: ListenerRegistration?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -12,13 +14,12 @@ struct ClientDetailView: View {
                 .bold()
 
             Text("Phone: \(client.phone ?? "-")")
-                .font(.subheadline)
+                .font(.title3)
                 .foregroundColor(.secondary)
 
             Text("Past Designs")
                 .font(.title2)
                 .bold()
-
             let images = client.designImageNames
 
             ScrollView(.horizontal, showsIndicators: false) {
@@ -36,23 +37,32 @@ struct ClientDetailView: View {
             Text("Appointments")
                 .font(.title2)
                 .bold()
-
-            List(client.appointments) { appointment in
-                VStack(alignment: .leading) {
-                    Text(appointment.service)
-                        .font(.headline)
-                    Text(appointment.date, style: .date)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+            if appts.isEmpty {
+                            Text("No appointments yet.").foregroundColor(.secondary)
+            } else {
+                List(appts.sorted(by: { $0.date < $1.date })) { appt in
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(appt.service).font(.headline)
+                        Text(appt.date.formatted(date: .abbreviated, time: .shortened))
+                            .font(.subheadline)
+                            .foregroundColor(.secondary) // e.g., “Nov 11, 3:45 PM”
+                    }
                 }
+                .frame(height: 220)
             }
-            .frame(height: 200) 
-
             Spacer()
         }
         .padding()
         .navigationTitle("Client Details")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            listener = FirestoreManager.shared.listenAppointments { all in
+                self.appts = all.filter { $0.clientId == client.id }
+            }
+        }
+        .onDisappear {
+            listener?.remove(); listener = nil
+        }
     }
 }
 

@@ -1,25 +1,106 @@
 import SwiftUI
 import Foundation
+import FirebaseFirestore 
 
 struct ClientsView: View {
-    @State var clients: [Client] = []
+    @State private var clients: [Client] = []
+    @State private var listener: ListenerRegistration?
+    @State private var showingAdd = false
     
     var body: some View {
-            NavigationView {
-                List(clients) { client in
-                    NavigationLink(destination: ClientDetailView(client: client)) {
-                        VStack(alignment: .leading) {
-                            Text(client.name)
-                                .font(.headline)
-                            Text(client.phone ?? "Not provided")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
+        NavigationView {
+            Group {
+                if clients.isEmpty {
+                    ContentUnavailableView("No clients yet",
+                                           systemImage: "person.3",
+                                           description: Text("Tap + to add your first client."))
+                } else {
+                    List(clients) { client in
+                        NavigationLink(destination: ClientDetailView(client: client)) {
+                            VStack(alignment: .leading) {
+                                Text(client.name)
+                                    .font(.headline)
+                                Text(client.phone ?? "Not provided")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
+                    .listStyle(.plain)
                 }
-                .navigationTitle("Clients")
+            }
+            .navigationTitle("Clients")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showingAdd = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .accessibilityLabel("Add Client")
+                }
             }
         }
+        .sheet(isPresented: $showingAdd) {
+            AddClientView { newClient in
+                Task {
+                    do {
+                        try await FirestoreManager.shared.addClient(newClient)
+                    } catch {
+                        print("⚠️ Failed to save client: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+        .onAppear {
+            // Start listening to Firestore
+            listener = FirestoreManager.shared.listenClients { fetched in
+                self.clients = fetched.sorted(by: { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending })
+            }
+        }
+        .onDisappear {
+            // Stop listening
+            listener?.remove()
+            listener = nil
+        }
+    }
 }
 
+struct AddClientView: View {
+    @Environment(\.dismiss) private var dismiss
+    @State private var name = ""
+    @State private var phone = ""
+
+    // Parent provides what to do with the new Client
+    let onSave: (Client) -> Void
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("Name", text: $name)
+                TextField("Phone (optional)", text: $phone)
+                    .keyboardType(.phonePad)
+            }
+            .navigationTitle("New Client")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        let client = Client(
+                            name: name.trimmingCharacters(in: .whitespacesAndNewlines),
+                            phone: phone.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? nil : phone,
+                            designImageNames: [],
+                            appointments: []
+                        )
+                        onSave(client)
+                        dismiss()
+                    }
+                    .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+            }
+        }
+    }
+}
 

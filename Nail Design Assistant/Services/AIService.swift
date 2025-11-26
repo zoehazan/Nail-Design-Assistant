@@ -16,7 +16,7 @@ final class AIService {
     }
     
     func generateDesign(prompt: String) async throws -> UIImage {
-        guard let url = URL(string: "http://127.0.0.1:3000/generate-nail-image") else {
+        guard let url = URL(string: "https://nail-ai-backend.onrender.com/generate-nail-image") else {
             throw URLError(.badURL)
         }
         

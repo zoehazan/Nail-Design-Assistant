@@ -91,6 +91,14 @@ final class FirestoreManager {
         ]
         try await doc.setData(data)
     }
+    
+    func appendDesignString(_ value: String, to client: Client) async throws {
+        try await clientsCol
+            .document(client.id.uuidString)
+            .updateData([
+                "designImageNames": FieldValue.arrayUnion([value])
+            ])
+    }
 }
 
 extension FirestoreManager {

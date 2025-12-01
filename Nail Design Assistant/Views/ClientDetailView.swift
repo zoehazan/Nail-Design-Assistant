@@ -1,5 +1,6 @@
 import SwiftUI
 import FirebaseFirestore
+import UIKit
 
 struct ClientDetailView: View {
     let client: Client
@@ -20,16 +21,31 @@ struct ClientDetailView: View {
             Text("Past Designs")
                 .font(.title2)
                 .bold()
+
             let images = client.designImageNames
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    ForEach(images, id: \.self) { name in
-                        Image(name)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 100)
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
+            if images.isEmpty {
+                Text("No saved designs yet.")
+                    .foregroundColor(.secondary)
+            } else {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(images, id: \.self) { base64 in
+                            if let data = Data(base64Encoded: base64),
+                               let uiImage = UIImage(data: data) {
+                                Image(uiImage: uiImage)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100)
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                            } else {
+                                Image(systemName: "photo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
                     }
                 }
             }
@@ -37,19 +53,22 @@ struct ClientDetailView: View {
             Text("Appointments")
                 .font(.title2)
                 .bold()
+
             if appts.isEmpty {
-                            Text("No appointments yet.").foregroundColor(.secondary)
+                Text("No appointments yet.")
+                    .foregroundColor(.secondary)
             } else {
                 List(appts.sorted(by: { $0.date < $1.date })) { appt in
                     VStack(alignment: .leading, spacing: 2) {
                         Text(appt.service).font(.headline)
                         Text(appt.date.formatted(date: .abbreviated, time: .shortened))
                             .font(.subheadline)
-                            .foregroundColor(.secondary) // e.g., “Nov 11, 3:45 PM”
+                            .foregroundColor(.secondary)
                     }
                 }
                 .frame(height: 220)
             }
+
             Spacer()
         }
         .padding()
@@ -65,4 +84,3 @@ struct ClientDetailView: View {
         }
     }
 }
-

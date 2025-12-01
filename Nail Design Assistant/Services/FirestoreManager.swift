@@ -8,7 +8,6 @@ final class FirestoreManager {
     
     let db = Firestore.firestore()
     
-    // Use the real signed-in user when available; fall back to a fixed dev UID if needed.
     var uid: String { Auth.auth().currentUser?.uid ?? "dev-user" }
     
     // MARK: - Collections

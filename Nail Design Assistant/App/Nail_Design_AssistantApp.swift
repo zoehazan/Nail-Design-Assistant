@@ -6,9 +6,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-      Auth.auth().signInAnonymously { result, error in
-          print("anon uid =", result?.user.uid ?? "nil", "err:", error?.localizedDescription ?? "-")
-      }
     return true
   }
 }
@@ -16,10 +13,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct Nail_Design_AssistantApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @StateObject private var authViewModel = AuthViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
         }
     }
 }

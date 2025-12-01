@@ -17,6 +17,10 @@ struct MainView: View {
                 .tabItem {
                     Label("AI Helper", systemImage: "sparkles")
                 }
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
         }
         .accentColor(.pink) // This sets the selected tab color
     }

@@ -52,7 +52,7 @@ struct CalendarView: View {
             .padding(.bottom, 70) // above the nav bar
         }
         .sheet(isPresented: $showingAddSheet) {
-            AddAppointmentView(clients: clients) { appt in
+            AddAppointmentView(clients: $clients) { appt in
                 Task { try? await FirestoreManager.shared.addAppointment(appt) }
             }
         }
@@ -93,7 +93,7 @@ struct CalendarView: View {
 
 struct AddAppointmentView: View {
     @Environment(\.dismiss) private var dismiss
-    let clients: [Client]
+    @Binding var clients: [Client]
     let onSave: (Appointment) -> Void
 
     @State private var selectedClientIndex: Int = 0

@@ -1,12 +1,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+
     var body: some View {
-        MainView()
+        if authViewModel.isSignedIn {
+            MainView()
+        } else {
+            AuthView()
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(AuthViewModel())
 }
-

@@ -135,3 +135,42 @@ struct AddAppointmentView: View {
         }
     }
 }
+
+struct EditAppointmentView: View {
+    @Environment(\.dismiss) private var dismiss
+    var appointment: Appointment
+    let onSave: (Appointment) -> Void
+
+    @State private var service: String = ""
+    @State private var date: Date = Date()
+
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("Service", text: $service)
+                DatePicker("Date & Time", selection: $date)
+            }
+            .navigationTitle("Edit Appointment")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        var updated = appointment
+                        updated.service = service
+                        updated.date = date
+                        onSave(updated)
+                        dismiss()
+                    }
+                    .disabled(service.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+            }
+        }
+        .onAppear {
+            service = appointment.service
+            date = appointment.date
+        }
+    }
+}
+

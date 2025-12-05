@@ -3,58 +3,57 @@ title: Nail Design Assistant
 layout: default
 ---
 
-# Nail Design Assistant 💅
+<link rel="stylesheet" href="/Nail-Design-Assistant/assets/css/theme.css">
 
-Nail Design Assistant is an iOS app for nail technicians.  
-It helps techs generate AI-powered nail art ideas, manage clients, and schedule appointments in one place.
+# Nail Design Assistant 💅  
+*An AI-powered mobile tool for professional nail technicians*
+
+Nail Design Assistant is an iOS app built specifically for **nail technicians** to help them manage their clients, track appointments, and generate creative nail art ideas using AI. The project combines a SwiftUI front-end with a **Node.js backend** that wraps OpenAI’s image generation models, ensuring that all prompts are transformed into nail-only designs. This prevents misuse as a general image generator and keeps the experience tailored to beauty professionals.
 
 ## 🎯 Project Overview
+This app was developed as my CSU Channel Islands Capstone Project. My goal was to build a clean, efficient tool that nail techs can rely on for organization and creativity. The app allows techs to:
 
-- **Platform:** iOS (SwiftUI)
-- **Backend:** Firebase (Auth + Firestore), custom AI backend (Render + OpenAI image models)
-- **Role:** Solo developer (Capstone project at CSU Channel Islands)
-- **Goal:** Give nail techs a simple tool to:
-  - Store client info and past designs  
-  - Book and view appointments on a calendar  
-  - Generate new nail design ideas with AI  
-
-## ✨ Key Features
-
-- **AI Design Helper** – type a prompt (e.g., *“sunset chrome almond nails”*) and get a nail-only design image.
-- **Client Management** – add clients, store phone numbers, see their past designs.
-- **Appointments Calendar** – schedule appointments and view them by date.
-- **Design History** – save AI designs to specific clients for future reference.
-- **Authentication** – secure login with Firebase Auth.
+- Store and manage client profiles  
+- Save and view past nail designs  
+- Book and browse appointments on a built-in calendar  
+- Generate AI-powered nail ideas customized from text prompts  
+- Keep all client history connected within a single workflow  
 
 ## 🧱 Tech Stack
+- **Frontend:** SwiftUI (iOS)  
+- **Backend:** Node.js + Express (hosted on Render)  
+- **AI:** OpenAI image generation (wrapped with nail-design–specific prompt engineering)  
+- **Authentication:** Firebase Auth  
+- **Database:** Firebase Firestore  
+- **Hosting:** GitHub Pages (this site)  
 
-- **Language:** Swift (SwiftUI)
-- **IDE:** Xcode
-- **Data:** Firebase Firestore (users, clients, appointments, designs)
-- **Auth:** Firebase Auth (email + password)
-- **AI Backend:** Custom endpoint on Render that wraps OpenAI image generation (DALL·E) with nail-specific prompts.
+## ✨ Key Features
+- **AI Nail Design Generator** – Takes short text prompts and converts them into nail-specific visual designs using a controlled prompt wrapper.  
+- **Client Management** – Create, edit, and delete client profiles, including phone numbers and saved nail designs.  
+- **Appointment System** – Book, edit, and delete appointments via a graphical calendar.  
+- **Design History** – Store generated designs under specific clients for reference and inspiration.  
+- **Secure Login** – Powered by Firebase for a simple email/password login flow.  
 
-## 🧪 Challenges & What I Learned
+## 👩🏻‍💻 What I Learned
+I developed this entire project **solo**, and I’m genuinely glad I did. Working independently forced me to learn *every* major part of building a complete application:
 
-- Designing a data model that keeps **users → clients → appointments → designs** connected in Firestore.
-- Building a clean **TabView-based navigation** for Calendar, Clients, AI Helper, and Settings.
-- Handling **live listeners** to keep the UI in sync with Firestore updates.
-- Prompt-wrapping so the AI generator **only** returns nail designs (not random images).
-- Managing real-world developer stuff like Git, multiple machines, and app icons.
+- Designing a scalable Firestore data model  
+- Building complex UI flows in SwiftUI  
+- Handling real-time listeners and state synchronization  
+- Creating and deploying a **Node.js backend**  
+- Engineering AI prompts so the generator is limited to nail-only outputs  
+- Managing app navigation, user experience, and polish  
+- Debugging across devices and computers  
+- Thinking like a full-stack developer  
 
-## 📸 Screenshots
+Completing every layer—backend, frontend, database, authentication, and AI—gave me a deep understanding of the entire development lifecycle and strengthened my confidence as an engineer.
 
-_(You can replace these with real images later.)_
-
-![AI Helper Screen](assets/ai-helper.png)
-![Clients Screen](assets/clients-screen.png)
-![Calendar Screen](assets/calendar-screen.png)
+## 📸 Screenshots (Coming Soon)
+Once my poster and final screenshots are ready, they will appear here.
 
 ## 🔗 Links
+- **GitHub Repository:** _[Add your repo link here]_  
+- **Capstone Poster (PDF):** _Coming soon_  
 
-- **GitHub Repository:** _link to this repo_
-- **Capstone Poster (PDF):** _link when available_
-
-## 👩🏻‍💻 About the Developer
-
-I’m **Zoe Hazan**, a Computer Science student at CSU Channel Islands, passionate about game dev, iOS apps, and combining tech with creativity. This project was built as my senior Capstone and is aimed at making life easier (and cuter) for nail techs.
+## 👩🏻‍🎨 About the Developer
+I’m **Zoe Hazan**, a Computer Science student at CSU Channel Islands. My work focuses on combining technology with creativity—whether through game development, iOS apps, or AI-powered tools. Nail Design Assistant reflects my passion for both software engineering and beauty design, and I plan to continue improving it beyond the Capstone.

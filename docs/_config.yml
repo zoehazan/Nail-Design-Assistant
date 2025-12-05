@@ -1,3 +1,8 @@
 theme: minima
+
 title: Nail Design Assistant
-description: Capstone project by Zoe Hazan – AI-powered nail design and salon assistant.
+description: An AI-powered iOS app for professional nail technicians.
+author: Zoe Hazan
+
+# Optional: removes bloggy stuff from minima
+show_excerpts: false

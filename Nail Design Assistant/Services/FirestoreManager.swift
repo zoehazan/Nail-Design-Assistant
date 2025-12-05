@@ -59,6 +59,34 @@ final class FirestoreManager {
         try await doc.setData(data, merge: true)
     }
     
+    // MARK: - Client Updates
+    func updateClient(_ client: Client) async throws {
+        let data: [String: Any] = [
+            "id": client.id.uuidString,
+            "name": client.name,
+            "phone": client.phone as Any,
+            "designImageNames": client.designImageNames
+        ]
+        try await clientsCol.document(client.id.uuidString).setData(data, merge: true)
+    }
+
+    // MARK: - Appointment Updates
+    func updateAppointment(_ appt: Appointment) async throws {
+        let data: [String: Any] = [
+            "id": appt.id.uuidString,
+            "clientId": appt.clientId?.uuidString as Any,
+            "clientName": appt.clientName,
+            "service": appt.service,
+            "date": Timestamp(date: appt.date)
+        ]
+        try await apptsCol.document(appt.id.uuidString).setData(data, merge: true)
+    }
+
+    func deleteAppointment(_ appt: Appointment) async throws {
+        try await apptsCol.document(appt.id.uuidString).delete()
+    }
+
+    
     @discardableResult
     func listenAppointments(onChange: @escaping ([Appointment]) -> Void) -> ListenerRegistration {
         apptsCol.addSnapshotListener { snap, _ in

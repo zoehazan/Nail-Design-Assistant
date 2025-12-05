@@ -104,3 +104,48 @@ struct AddClientView: View {
     }
 }
 
+struct EditClientView: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    @Binding var client: Client
+    let onSave: (Client) -> Void
+    
+    @State private var name: String = ""
+    @State private var phone: String = ""
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                TextField("Name", text: $name)
+                TextField("Phone (optional)", text: $phone)
+                    .keyboardType(.phonePad)
+            }
+            .navigationTitle("Edit Client")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") {
+                        var updated = client
+                        updated.name = name.trimmingCharacters(in: .whitespacesAndNewlines)
+                        let trimmedPhone = phone.trimmingCharacters(in: .whitespacesAndNewlines)
+                        updated.phone = trimmedPhone.isEmpty ? nil : trimmedPhone
+                        
+                        client = updated          // update local state
+                        onSave(updated)           // propagate to Firestore
+                        dismiss()
+                    }
+                    .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+            }
+        }
+        .onAppear {
+            // Seed fields from current client
+            name = client.name
+            phone = client.phone ?? ""
+        }
+    }
+}
+
+

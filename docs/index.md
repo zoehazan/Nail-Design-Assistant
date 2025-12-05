@@ -60,10 +60,7 @@ Completing every layer—backend, frontend, database, authentication, and AI—g
 
 ## 🔗 Links
 - **GitHub Repository:** https://github.com/zoehazan/Nail-Design-Assistant  
-- **Capstone Poster (PDF):** _Coming soon_  
-
-## 👩🏻‍🎨 About the Developer
----
+- **Capstone Poster (PDF):** [Download Poster](assets/docs/CapstonePoster.pdf)  
 
 ## 👩🏻‍💻 About the Developer
 This project was created by **Zoe Hazan**, a Computer Science student at CSU Channel Islands.  

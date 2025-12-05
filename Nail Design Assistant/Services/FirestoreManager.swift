@@ -69,6 +69,33 @@ final class FirestoreManager {
         ]
         try await clientsCol.document(client.id.uuidString).setData(data, merge: true)
     }
+    
+    // MARK: - Delete client + related data
+    func deleteClientAndRelatedData(_ client: Client) async throws {
+        let clientIdStr = client.id.uuidString
+
+        // 1) Delete this client's appointments
+        let apptSnap = try await apptsCol
+            .whereField("clientId", isEqualTo: clientIdStr)
+            .getDocuments()
+
+        for doc in apptSnap.documents {
+            try await doc.reference.delete()
+        }
+
+        // 2) Delete this client's designs (if you're storing clientId on designs)
+        let designSnap = try await designsCol
+            .whereField("clientId", isEqualTo: clientIdStr)
+            .getDocuments()
+
+        for doc in designSnap.documents {
+            try await doc.reference.delete()
+        }
+
+        // 3) Delete the client document itself
+        try await clientsCol.document(clientIdStr).delete()
+    }
+
 
     // MARK: - Appointment Updates
     func updateAppointment(_ appt: Appointment) async throws {

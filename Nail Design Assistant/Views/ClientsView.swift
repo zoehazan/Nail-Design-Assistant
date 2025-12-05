@@ -7,6 +7,9 @@ struct ClientsView: View {
     @State private var listener: ListenerRegistration?
     @State private var showingAdd = false
     
+    @State private var clientToDelete: Client?
+    @State private var showingDeleteAlert = false
+    
     var body: some View {
         NavigationView {
             Group {
@@ -23,6 +26,14 @@ struct ClientsView: View {
                                 Text(client.phone ?? "Not provided")
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
+                            }
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                clientToDelete = client
+                                showingDeleteAlert = true
+                            } label: {
+                                Label("Delete", systemImage: "trash")
                             }
                         }
                     }
@@ -62,6 +73,21 @@ struct ClientsView: View {
             // Stop listening
             listener?.remove()
             listener = nil
+        }
+        .onDisappear {
+            // Stop listening
+            listener?.remove()
+            listener = nil
+        }
+        .alert("Delete client?", isPresented: $showingDeleteAlert, presenting: clientToDelete) { client in
+            Button("Delete", role: .destructive) {
+                Task {
+                    try? await FirestoreManager.shared.deleteClientAndRelatedData(client)
+                }
+            }
+            Button("Cancel", role: .cancel) { }
+        } message: { client in
+            Text("This will delete \(client.name), all of their appointments, and all designs linked to them. This cannot be undone.")
         }
     }
 }

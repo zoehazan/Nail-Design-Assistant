@@ -48,12 +48,24 @@ I developed this entire project **solo**, and I’m genuinely glad I did. Workin
 
 Completing every layer—backend, frontend, database, authentication, and AI—gave me a deep understanding of the entire development lifecycle and strengthened my confidence as an engineer.
 
-## 📸 Screenshots (Coming Soon)
-Once my poster and final screenshots are ready, they will appear here.
+## 📸 Screenshots
+### AI Helper View
+![AI Helper](assets/screenshots/02.png)
+
+### Clients List
+![Clients](assets/screenshots/04.png)
+
+### Calendar View
+![Calendar](assets/screenshots/03.png)
 
 ## 🔗 Links
-- **GitHub Repository:** _[Add your repo link here]_  
+- **GitHub Repository:** https://github.com/zoehazan/Nail-Design-Assistant  
 - **Capstone Poster (PDF):** _Coming soon_  
 
 ## 👩🏻‍🎨 About the Developer
-I’m **Zoe Hazan**, a Computer Science student at CSU Channel Islands. My work focuses on combining technology with creativity—whether through game development, iOS apps, or AI-powered tools. Nail Design Assistant reflects my passion for both software engineering and beauty design, and I plan to continue improving it beyond the Capstone.
+---
+
+## 👩🏻‍💻 About the Developer
+This project was created by **Zoe Hazan**, a Computer Science student at CSU Channel Islands.  
+For questions or collaboration, you can reach me at: **zoehazan@gmail.com**
+

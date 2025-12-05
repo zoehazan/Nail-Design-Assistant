@@ -20,11 +20,24 @@ final class AIService {
             throw URLError(.badURL)
         }
         
+        // 1️⃣ Clean up the user text
+        let trimmed = prompt.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // 2️⃣ Wrap it so the model ALWAYS sees a "nail art" request
+        let wrappedPrompt = """
+        Highly detailed close-up photo of real human hands with a professional nail art manicure. \
+        Focus tightly on the nails only; crop out faces and bodies. \
+        Nail design description: \(trimmed). \
+        Background soft and unobtrusive, like a salon portfolio photo. \
+        This should be a nail design image, not a general illustration.
+        """
+        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let body = PromptRequest(prompt: prompt)
+        // 3️⃣ Send the wrapped prompt to your backend
+        let body = PromptRequest(prompt: wrappedPrompt)
         request.httpBody = try JSONEncoder().encode(body)
         
         let (data, response) = try await URLSession.shared.data(for: request)
